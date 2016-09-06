@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenshotCapture.Lib", "src\ScreenshotCapture.Lib\ScreenshotCapture.Lib.csproj", "{B2A5B5AC-D760-4562-9222-AFD35429B64E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenshotCapture", "src\ScreenshotCapture\ScreenshotCapture.csproj", "{2AE86874-F978-4284-B1E7-F260AFB08268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2A5B5AC-D760-4562-9222-AFD35429B64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A5B5AC-D760-4562-9222-AFD35429B64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A5B5AC-D760-4562-9222-AFD35429B64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A5B5AC-D760-4562-9222-AFD35429B64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE86874-F978-4284-B1E7-F260AFB08268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE86874-F978-4284-B1E7-F260AFB08268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE86874-F978-4284-B1E7-F260AFB08268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE86874-F978-4284-B1E7-F260AFB08268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
