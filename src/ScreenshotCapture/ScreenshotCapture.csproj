@@ -32,9 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
@@ -58,9 +56,6 @@
       <Project>{B2A5B5AC-D760-4562-9222-AFD35429B64E}</Project>
       <Name>ScreenshotCapture.Lib</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

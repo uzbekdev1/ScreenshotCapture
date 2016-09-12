@@ -28,22 +28,18 @@ namespace ScreenshotCapture
             // Hide
             PinvokeHelper.ShowWindow(handle, PinvokeHelper.SW_HIDE);      
 #endif
-
+            
             for (var i = 0; i < int.MaxValue; i++)
             {
                 var stopWatch = new Stopwatch();
                 stopWatch.Start();
-                var path = Path.Combine(Root, Path.ChangeExtension(Path.GetRandomFileName(), ".jpeg"));
-                var capturer = new ScreenCapture();
-                var bmp = capturer.CaptureScreen();
+                var bmp = ScreenCapture.GetImage(true);
 
-                //need to check balnk iamges
                 if (BitmapDetector.IsBlank(bmp))
                     continue;
 
-                bmp.Save(path,ImageFormat.Jpeg);
                 stopWatch.Stop();
-                Console.WriteLine("{0}({1:g}ms)", path, stopWatch.Elapsed);
+                Console.WriteLine("{0}({1:g}ms)", bmp, stopWatch.Elapsed);
 
                 Thread.Sleep(1000);
             }

@@ -10,12 +10,19 @@ namespace ScreenshotCapture.Lib
     /// </summary>
     public static class BitmapDetector
     {
+        public static bool IsBlank(string img)
+        {
+            var bmp = (Bitmap)Image.FromFile(img);
+
+            return IsBlank(bmp);
+        }
+
         /// <summary>
         ///     check is blank
         /// </summary>
         /// <param name="img"></param>
         /// <returns></returns>
-        public static bool IsBlank(Bitmap img)
+        private static bool IsBlank(Bitmap img)
         {
             var stdDev = GetStdDev(img);
             var tolerance = 100000;
@@ -28,7 +35,7 @@ namespace ScreenshotCapture.Lib
         /// </summary>
         /// <param name="bitmap">Name of the image file.</param>
         /// <returns>Standard deviation.</returns>
-        public static double GetStdDev(Bitmap bitmap)
+        private static double GetStdDev(Bitmap bitmap)
         {
             double total = 0, totalVariance = 0;
             var count = 0;
@@ -42,8 +49,8 @@ namespace ScreenshotCapture.Lib
 
             unsafe
             {
-                var p = (byte*) (void*) Scan0;
-                var nOffset = stride - bitmap.Width*3;
+                var p = (byte*)(void*)Scan0;
+                var nOffset = stride - bitmap.Width * 3;
                 for (var y = 0; y < bitmap.Height; ++y)
                 {
                     for (var x = 0; x < bitmap.Width; ++x)
@@ -56,9 +63,9 @@ namespace ScreenshotCapture.Lib
 
                         var pixelValue = Color.FromArgb(0, red, green, blue).ToArgb();
                         total += pixelValue;
-                        var avg = total/count;
+                        var avg = total / count;
                         totalVariance += Math.Pow(pixelValue - avg, 2);
-                        stdDev = Math.Sqrt(totalVariance/count);
+                        stdDev = Math.Sqrt(totalVariance / count);
 
                         p += 3;
                     }
