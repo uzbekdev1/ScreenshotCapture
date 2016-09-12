@@ -9,7 +9,7 @@ namespace ScreenshotCapture.Lib
 {
     public class ScreenCapture
     {
-        public static string GetImage(bool isAll)
+        public static string GetImage(bool isAll=false)
         {
             if (isAll)
             {

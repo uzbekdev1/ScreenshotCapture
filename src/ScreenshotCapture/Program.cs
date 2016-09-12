@@ -33,7 +33,7 @@ namespace ScreenshotCapture
             {
                 var stopWatch = new Stopwatch();
                 stopWatch.Start();
-                var bmp = ScreenCapture.GetImage(true);
+                var bmp = ScreenCapture.GetImage();
 
                 if (BitmapDetector.IsBlank(bmp))
                     continue;
